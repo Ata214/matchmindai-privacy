@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MatchMind AI - Privacy Policy</title>
+    <title>MatchMind AI - Gizlilik Politikası / Privacy Policy</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -70,134 +70,229 @@
             color: #999;
             font-size: 13px;
         }
+        .lang-switch { display: flex; gap: 8px; margin-bottom: 24px; }
+        .lang-switch a { padding: 6px 14px; border-radius: 999px; background: #e8eaf6; text-decoration: none; font-weight: 600; font-size: 14px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14px; }
+        th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e8eaf6; vertical-align: top; }
+        th { color: #283593; }
+        hr.lang { border: 0; border-top: 3px solid #e8eaf6; margin: 48px 0; }
+        @media (max-width: 600px) { .container { padding: 24px 18px; } table { font-size: 13px; } }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🔒 Privacy Policy</h1>
-        <p class="effective-date">Effective Date: February 14, 2025 &nbsp;|&nbsp; Last Updated: February 14, 2025</p>
+<div class="container">
+<nav class="lang-switch" aria-label="Language">
+  <a href="#tr">Türkçe</a>
+  <a href="#en">English</a>
+  <a href="#tr-delete">Hesap silme</a>
+  <a href="#en-delete">Delete account</a>
+</nav>
 
-        <p>This Privacy Policy describes how <strong>MatchMind AI</strong> ("we", "our", or "the App") collects, uses, and protects information when you use our mobile application. By using the App, you agree to the practices described in this policy.</p>
+<section id="tr" lang="tr">
+<h1>Gizlilik Politikası</h1>
+<p class="effective-date">Yürürlük tarihi: 18 Kasım 2026 · 14 Şubat 2025 tarihli sürümün yerine geçer</p>
 
-        <h2>1. Information We Collect</h2>
+<p>Bu politika, <strong>MatchMind AI</strong> uygulamasının (paket <code>com.ata.matchmindai</code>, "Uygulama", "biz") hangi verileri neden topladığını, kimlerle paylaştığını ve verilerinizi nasıl silebileceğinizi açıklar.</p>
 
-        <h3>1.1 Information You Provide</h3>
-        <ul>
-            <li><strong>Language Preference:</strong> Your selected display language (Turkish or English).</li>
-            <li><strong>Favorite Leagues:</strong> The football leagues you choose to follow within the App.</li>
-            <li><strong>App Theme Preference:</strong> Your selected display mode (dark/light).</li>
-        </ul>
-        <div class="highlight">
-            <strong>Important:</strong> All user preferences listed above are stored <strong>locally on your device only</strong> using SharedPreferences. They are never transmitted to our servers or any third party.
-        </div>
+<h2>1. Topladığımız veriler</h2>
+<h3>1.1 Hesap (isteğe bağlı)</h3>
+<p>Uygulamayı hesap açmadan kullanabilirsiniz. Hesap açarsanız:</p>
+<ul>
+  <li><strong>E-posta ile kayıt:</strong> e-posta adresi, görünen ad ve şifre. Şifre, hesap sağlayıcımız (Appwrite) tarafından yalnızca güvenli bir özet (hash) olarak saklanır; biz göremeyiz. Adresi doğrulamak için e-postanıza tek kullanımlık bir kod gönderilir.</li>
+  <li><strong>Google ile giriş:</strong> Google hesabınızdaki adınız, e-posta adresiniz ve profil fotoğrafı bağlantınız.</li>
+</ul>
+<h3>1.2 Tanımlayıcılar</h3>
+<ul>
+  <li><strong>Anonim kullanıcı kimliği:</strong> İlk açılışta Firebase Authentication tarafından oluşturulan rastgele bir kimlik. Tahminlerinizi ve istatistiklerinizi, kim olduğunuzu göstermeden ilişkilendirir.</li>
+  <li><strong>Bildirim anahtarı:</strong> Cihazınıza bildirim gönderebilmemizi sağlayan Firebase Cloud Messaging anahtarı.</li>
+  <li><strong>Reklam kimliği:</strong> Reklam göstermek için Google AdMob tarafından toplanır (bkz. 1.6).</li>
+</ul>
+<h3>1.3 Tahminler, istatistikler ve sıralama</h3>
+<ul>
+  <li>Kendi maç tahminleriniz, sonuçları, puanınız/seviyeniz, takma adınız ve (varsa) profil fotoğrafınız.</li>
+  <li><strong>Herkese açık:</strong> Takma adınız, profil fotoğrafınız ve tahmin istatistikleriniz sıralama tablosunda diğer kullanıcılara görünür. E-posta adresiniz hiçbir zaman gösterilmez.</li>
+  <li>Maçlar için yapılan AI tahminleri kişisel veri içermeden saklanır ve tüm kullanıcılara topluluk istatistiği olarak gösterilir.</li>
+</ul>
+<h3>1.4 AI sohbet</h3>
+<ul>
+  <li>AI sohbete yazdığınız mesajlar, cevap üretmek için sunucumuza ve 3. bölümdeki yapay zeka sağlayıcılarına gönderilir.</li>
+  <li>Cevap güncel bilgi gerektirdiğinde, mesajınızdan türetilen kısa bir arama sorgusu web arama sağlayıcılarına gönderilir.</li>
+  <li>Sohbet geçmişiniz <strong>yalnızca cihazınızda</strong> saklanır. Sohbete kişisel bilgilerinizi yazmayın.</li>
+</ul>
+<h3>1.5 Satın alımlar</h3>
+<p>Abonelik ödemeleri Google Play (veya App Store) üzerinden yapılır; kart bilgilerinizi hiçbir zaman almayız. RevenueCat, aboneliğinizin aktif olup olmadığını kontrol etmek için satın alma makbuzunu ve kullanıcı kimliğinizi alır.</p>
+<h3>1.6 Reklamlar</h3>
+<p>Ücretsiz kullanıcılara Google AdMob reklamları gösterilir. AdMob, reklam göstermek ve ölçmek için reklam kimliğinizi, IP adresinizi ve cihaz bilgilerinizi toplayabilir; yasaların izin verdiği yerlerde kişiselleştirilmiş reklam gösterebilir. Reklam kimliğinizi cihaz ayarlarından sıfırlayabilir, silebilir veya kişiselleştirilmiş reklamları kapatabilirsiniz. Premium kullanıcılar reklam görmez.</p>
+<h3>1.7 Bildirimler</h3>
+<p>Bir maç için gol bildirimini açtığınızda bildirim anahtarınız ve maç kimliği sunucumuzda saklanır ve 8 saat sonra otomatik olarak silinir. Günlük özete (Premium) abone olursanız anahtarınız, özeti kapatana kadar saklanır.</p>
+<h3>1.8 Teknik veriler</h3>
+<p>Sunucumuz (Cloudflare), hizmeti sunmak, kötüye kullanımı önlemek ve istek sınırlarını uygulamak için IP adresinizi ve istek zamanlarını işler.</p>
+<h3>1.9 Cihazınızda kalan veriler</h3>
+<p>Dil, tema, favori ligler ve maçlar, sohbet geçmişi ve kayıtlı kuponlar cihazınızda saklanır; uygulamayı kaldırdığınızda veya verilerini temizlediğinizde silinir.</p>
 
-        <h3>1.2 Automatically Collected Information</h3>
-        <ul>
-            <li><strong>Anonymous Device Identifier:</strong> A randomly generated, non-personally-identifiable device ID created solely for associating AI predictions with community statistics. This ID cannot be used to identify you personally.</li>
-            <li><strong>AI Prediction Data:</strong> When you request an AI prediction, the following is stored anonymously in Firebase:
-                <ul>
-                    <li>Match identifier (match ID)</li>
-                    <li>Predicted result (home/away/draw)</li>
-                    <li>Confidence score</li>
-                    <li>Prediction date</li>
-                    <li>Team names and league information (public match data only)</li>
-                </ul>
-            </li>
-        </ul>
+<h2>2. Verileri nasıl kullanırız</h2>
+<ul>
+  <li>Uygulamayı sunmak için: maç verileri, AI tahminleri, AI sohbet, kuponlar, bildirimler ve sıralama.</li>
+  <li>Hesabınızı ve Premium aboneliğinizi yönetmek için.</li>
+  <li>Ücretsiz kullanıcılara reklam göstermek için.</li>
+  <li>Hizmeti güvende tutmak ve kötüye kullanımı önlemek için.</li>
+</ul>
+<p>Verilerinizi <strong>satmayız</strong>.</p>
 
-        <h3>1.3 Information We Do NOT Collect</h3>
-        <ul>
-            <li>❌ Personal names, email addresses, or phone numbers</li>
-            <li>❌ Location data (GPS, IP-based location)</li>
-            <li>❌ Contact lists or address books</li>
-            <li>❌ Photos, files, or media from your device</li>
-            <li>❌ Financial or payment information</li>
-            <li>❌ Browsing history or activity outside the App</li>
-            <li>❌ Advertising identifiers or tracking cookies</li>
-        </ul>
+<h2>3. Hizmet sağlayıcılar</h2>
+<table>
+  <tr><th>Sağlayıcı</th><th>Amaç</th><th>Veri</th></tr>
+  <tr><td>Google Firebase</td><td>Anonim giriş, veritabanı, bildirimler</td><td>Anonim kimlik, tahminler, istatistikler, takma ad, bildirim anahtarı</td></tr>
+  <tr><td>Appwrite</td><td>Hesaplar ve kullanıcı veritabanı</td><td>E-posta, ad, profil fotoğrafı bağlantısı, tahminler, istatistikler</td></tr>
+  <tr><td>Google AdMob</td><td>Reklamlar</td><td>Reklam kimliği, IP adresi, cihaz bilgisi</td></tr>
+  <tr><td>Google Play / Apple, RevenueCat</td><td>Ödeme ve abonelik durumu</td><td>Satın alma makbuzu, kullanıcı kimliği</td></tr>
+  <tr><td>Cloudflare</td><td>Sunucumuz</td><td>IP adresi, istekler, bildirim anahtarları</td></tr>
+  <tr><td>Groq, NVIDIA, Kilo Code, Google Gemini</td><td>AI cevapları ve tahminleri üretmek</td><td>Sohbet mesajları, herkese açık maç verileri</td></tr>
+  <tr><td>Tavily, Exa, Google News</td><td>Güncel bilgi için web araması</td><td>Arama sorguları</td></tr>
+  <tr><td>ESPN, API-Football</td><td>Maç verileri</td><td>Kişisel veri yok</td></tr>
+</table>
+<p>Her sağlayıcı verileri kendi gizlilik politikasına göre işler. Bazıları, Amerika Birleşik Devletleri dahil, yurt dışında bulunur; verileriniz bu nedenle yurt dışına aktarılabilir.</p>
 
-        <h2>2. How We Use Information</h2>
-        <p>We use the collected information solely for the following purposes:</p>
-        <ul>
-            <li><strong>Providing AI Predictions:</strong> To generate and display match predictions based on publicly available football data.</li>
-            <li><strong>Community Statistics:</strong> To show aggregated, anonymous prediction accuracy statistics to all users.</li>
-            <li><strong>Prediction Caching:</strong> To cache AI-generated predictions in Firebase so the same prediction doesn't need to be regenerated, improving performance.</li>
-            <li><strong>App Functionality:</strong> To remember your preferences (language, theme, favorite leagues) for a personalized experience.</li>
-        </ul>
+<h2>4. Saklama süreleri</h2>
+<ul>
+  <li>Hesap verileri, tahminler ve istatistikler: hesabınızı silene kadar.</li>
+  <li>Gol bildirimi anahtarları: 8 saat. Günlük özet anahtarı: özeti kapatana kadar.</li>
+  <li>Cihazınızdaki veriler: uygulamayı kaldırana veya verilerini temizleyene kadar.</li>
+</ul>
 
-        <h2>3. Third-Party Services</h2>
-        <p>The App uses the following third-party services:</p>
+<h2 id="tr-delete">5. Hesabınızı ve verilerinizi silme</h2>
+<ul>
+  <li><strong>Uygulamadan:</strong> Ayarlar → Hesap → <em>Hesabı ve verileri sil</em>. Hesabınız, tahminleriniz ve istatistikleriniz kalıcı olarak silinir ve oturumunuz kapanır.</li>
+  <li><strong>Uygulama olmadan:</strong> Hesabınızın e-posta adresinden <a href="mailto:matchmindai@gmail.com?subject=Hesap%20silme%20talebi">matchmindai@gmail.com</a> adresine "Hesap silme talebi" konulu bir e-posta gönderin. Hesabı ve verilerini 30 gün içinde siler, e-postayla bildiririz.</li>
+</ul>
+<p>Anonim AI tahminleri ve toplu topluluk istatistikleri kişisel veri içermez ve silinmez.</p>
 
-        <h3>3.1 Firebase (Google)</h3>
-        <ul>
-            <li><strong>Purpose:</strong> Anonymous storage of community prediction statistics and prediction caching.</li>
-            <li><strong>Data Stored:</strong> Anonymous prediction records (match ID, result, confidence score).</li>
-            <li><strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
-        </ul>
+<h2>6. Haklarınız</h2>
+<p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve bulunduğunuz ülkenin mevzuatı (örneğin GDPR) kapsamında verilerinize erişme, düzeltilmesini, silinmesini veya bir kopyasını isteme ve işlenmesine itiraz etme hakkınız vardır. Taleplerinizi <a href="mailto:matchmindai@gmail.com">matchmindai@gmail.com</a> adresine iletin; 30 gün içinde yanıtlarız. Kişisel Verileri Koruma Kurumu'na veya ülkenizdeki veri koruma otoritesine şikâyette bulunabilirsiniz.</p>
 
-        <h3>3.2 ESPN API</h3>
-        <ul>
-            <li><strong>Purpose:</strong> Fetching publicly available football match data, scores, schedules, and team statistics.</li>
-            <li><strong>Data Sent:</strong> No user data is sent. Only match/team identifiers are used to retrieve public sports data.</li>
-            <li><strong>Privacy Policy:</strong> <a href="https://privacy.thewaltdisneycompany.com/en/" target="_blank">ESPN/Disney Privacy Policy</a></li>
-        </ul>
+<h2>7. Yaş sınırı</h2>
+<p>Uygulama futbol tahminleri ve bahisle ilgili bilgiler içerdiği için <strong>18 yaş ve üzeri</strong> kullanıcılar içindir. 18 yaşından küçüklerden bilerek veri toplamayız; bir reşit olmayanın bize veri verdiğini düşünüyorsanız bizimle iletişime geçin, verileri sileriz.</p>
 
-        <h3>3.3 Groq AI API</h3>
-        <ul>
-            <li><strong>Purpose:</strong> Generating AI-powered match predictions and analysis.</li>
-            <li><strong>Data Sent:</strong> Publicly available match statistics (team names, scores, league standings). No personal user data is transmitted.</li>
-            <li><strong>Privacy Policy:</strong> <a href="https://groq.com/privacy-policy/" target="_blank">Groq Privacy Policy</a></li>
-        </ul>
+<h2>8. Güvenlik</h2>
+<p>Tüm bağlantılar HTTPS ile şifrelenir. Hesap verilerinize erişim oturum açmayı gerektirir ve şifreler hesap sağlayıcımızda yalnızca özet (hash) olarak saklanır.</p>
 
-        <h3>3.4 Firebase Cloud Messaging (FCM)</h3>
-        <ul>
-            <li><strong>Purpose:</strong> Sending optional push notifications for match reminders.</li>
-            <li><strong>Data:</strong> A device token is generated by Firebase for notification delivery. This token is not linked to any personal information.</li>
-        </ul>
+<h2>9. Sorumluluk reddi</h2>
+<div class="highlight">AI tahminleri yalnızca bilgilendirme amaçlı istatistiksel tahminlerdir; yanılabilir ve hiçbir sonucu garanti etmez. Uygulama bahis veya kumar hizmeti sunmaz, aracılık etmez ve bu tür hizmetlere bağlantı vermez.</div>
 
-        <h2>4. Data Storage and Security</h2>
-        <ul>
-            <li>User preferences are stored <strong>locally on your device</strong> and are never transmitted externally.</li>
-            <li>Prediction data stored in Firebase is <strong>fully anonymous</strong> and cannot be traced back to any individual user.</li>
-            <li>All network communications use <strong>HTTPS encryption</strong> (TLS/SSL) to protect data in transit.</li>
-            <li>We do not sell, trade, or share any data with third parties for advertising or marketing purposes.</li>
-        </ul>
+<h2>10. Değişiklikler</h2>
+<p>Bu politika değiştiğinde yeni sürümü bu sayfada yayınlar ve üstteki tarihi güncelleriz.</p>
 
-        <h2>5. Data Retention</h2>
-        <ul>
-            <li><strong>Local Data:</strong> Stored on your device until you uninstall the App or clear app data.</li>
-            <li><strong>Prediction Cache:</strong> Cached predictions expire automatically after 24 hours.</li>
-            <li><strong>Community Statistics:</strong> Anonymous prediction records are retained for community accuracy tracking. These may be periodically purged.</li>
-        </ul>
+<div class="contact-box">
+  <strong>İletişim</strong><br>
+  E-posta: <a href="mailto:matchmindai@gmail.com">matchmindai@gmail.com</a><br>
+  Uygulama: MatchMind AI · <code>com.ata.matchmindai</code>
+</div>
+</section>
 
-        <h2>6. Children's Privacy</h2>
-        <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us so that we can take appropriate action.</p>
+<hr class="lang">
 
-        <h2>7. Your Rights</h2>
-        <p>Since we do not collect personally identifiable information, traditional data subject rights (access, correction, deletion) are generally not applicable. However:</p>
-        <ul>
-            <li>You can <strong>clear all local data</strong> by uninstalling the App or clearing app data in your device settings.</li>
-            <li>You can <strong>disable notifications</strong> at any time through the App settings or your device settings.</li>
-            <li>You can <strong>contact us</strong> for any privacy-related questions or concerns.</li>
-        </ul>
+<section id="en" lang="en">
+<h1>Privacy Policy</h1>
+<p class="effective-date">Effective date: 18 November 2026 · Replaces the version of 14 February 2025</p>
 
-        <h2>8. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Last Updated" date at the top of this page. We encourage you to review this Privacy Policy periodically for any changes. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+<p>This policy explains what data <strong>MatchMind AI</strong> (package <code>com.ata.matchmindai</code>, "the App", "we") collects, why, who it is shared with, and how you can delete it.</p>
 
-        <h2>9. Disclaimer</h2>
-        <p>The AI predictions provided by this App are for <strong>informational and entertainment purposes only</strong>. They do not guarantee accurate match results and should <strong>not</strong> be used for betting, gambling, or any financial investment purposes. We are not responsible for any decisions made based on the predictions provided.</p>
+<h2>1. Data we collect</h2>
+<h3>1.1 Account (optional)</h3>
+<p>You can use the App without an account. If you create one:</p>
+<ul>
+  <li><strong>Email sign-up:</strong> email address, display name and password. The password is stored only as a secure hash by our account provider (Appwrite); we never see it. A one-time code is emailed to verify the address.</li>
+  <li><strong>Google sign-in:</strong> your name, email address and profile picture URL from your Google account.</li>
+</ul>
+<h3>1.2 Identifiers</h3>
+<ul>
+  <li><strong>Anonymous user ID:</strong> a random ID created by Firebase Authentication on first launch. It links your predictions and statistics without revealing who you are.</li>
+  <li><strong>Notification token:</strong> a Firebase Cloud Messaging token that lets us send notifications to your device.</li>
+  <li><strong>Advertising ID:</strong> collected by Google AdMob to show ads (see 1.6).</li>
+</ul>
+<h3>1.3 Predictions, statistics and leaderboard</h3>
+<ul>
+  <li>Your own match predictions, their results, your points/level and your nickname and profile picture (if set).</li>
+  <li><strong>Public:</strong> your nickname, profile picture and prediction statistics are visible to other users on the leaderboard. Your email address is never shown.</li>
+  <li>AI predictions for matches are stored without any personal data and are shown to all users as community statistics.</li>
+</ul>
+<h3>1.4 AI chat</h3>
+<ul>
+  <li>Messages you type in the AI chat are sent to our server and to the AI providers listed in section 3 to generate an answer.</li>
+  <li>When an answer needs current information, a short search query based on your message is sent to web search providers.</li>
+  <li>Your chat history is stored <strong>only on your device</strong>. Do not enter personal information in the chat.</li>
+</ul>
+<h3>1.5 Purchases</h3>
+<p>Subscriptions are paid through Google Play (or the App Store). We never receive your card details. RevenueCat receives the purchase receipt and your user ID to check whether your subscription is active.</p>
+<h3>1.6 Advertising</h3>
+<p>Free users see ads from Google AdMob. AdMob may collect your advertising ID, IP address and device information to show and measure ads, including personalised ads where the law allows. You can reset or delete your advertising ID or opt out of personalised ads in your device settings. Premium users do not see ads.</p>
+<h3>1.7 Notifications</h3>
+<p>When you turn on goal alerts for a match, your notification token and the match ID are stored on our server and deleted automatically 8 hours later. If you subscribe to the daily summary (Premium), your token is kept until you turn the summary off.</p>
+<h3>1.8 Technical data</h3>
+<p>Our server (Cloudflare) processes your IP address and request times to deliver the service, prevent abuse and enforce rate limits.</p>
+<h3>1.9 Data kept on your device</h3>
+<p>Language, theme, favourite leagues and matches, chat history and saved coupons are stored locally and are removed when you uninstall the App or clear its data.</p>
 
-        <div class="contact-box">
-            <h2 style="margin-top: 0; border: none;">10. Contact Us</h2>
-            <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
-            <p>📧 <strong>Email:</strong> <a href="mailto:matchmindai@gmail.com">matchmindai@gmail.com</a></p>
-            <p>📱 <strong>App:</strong> MatchMind AI</p>
-            <p>📦 <strong>Package:</strong> com.ata.matchmindai</p>
-        </div>
+<h2>2. How we use data</h2>
+<ul>
+  <li>To provide the App: match data, AI predictions, AI chat, coupons, notifications and the leaderboard.</li>
+  <li>To manage your account and Premium subscription.</li>
+  <li>To show ads to free users.</li>
+  <li>To keep the service secure and prevent abuse.</li>
+</ul>
+<p>We do <strong>not</strong> sell your data.</p>
 
-        <footer>
-            <p>© 2025 MatchMind AI. All rights reserved.</p>
-        </footer>
-    </div>
+<h2>3. Service providers</h2>
+<table>
+  <tr><th>Provider</th><th>Purpose</th><th>Data</th></tr>
+  <tr><td>Google Firebase</td><td>Anonymous sign-in, database, notifications</td><td>Anonymous ID, predictions, statistics, nickname, notification token</td></tr>
+  <tr><td>Appwrite</td><td>Accounts and user database</td><td>Email, name, profile picture URL, predictions, statistics</td></tr>
+  <tr><td>Google AdMob</td><td>Ads</td><td>Advertising ID, IP address, device information</td></tr>
+  <tr><td>Google Play / Apple, RevenueCat</td><td>Payments and subscription status</td><td>Purchase receipt, user ID</td></tr>
+  <tr><td>Cloudflare</td><td>Our server</td><td>IP address, requests, notification tokens</td></tr>
+  <tr><td>Groq, NVIDIA, Kilo Code, Google Gemini</td><td>Generating AI answers and predictions</td><td>Chat messages, public match data</td></tr>
+  <tr><td>Tavily, Exa, Google News</td><td>Web search for current facts</td><td>Search queries</td></tr>
+  <tr><td>ESPN, API-Football</td><td>Match data</td><td>No personal data</td></tr>
+</table>
+<p>Each provider processes data under its own privacy policy. Some of them are located outside your country, including in the United States.</p>
+
+<h2>4. Retention</h2>
+<ul>
+  <li>Account data, predictions and statistics: until you delete your account.</li>
+  <li>Goal-alert tokens: 8 hours. Daily-summary token: until you turn it off.</li>
+  <li>Data on your device: until you uninstall the App or clear its data.</li>
+</ul>
+
+<h2 id="en-delete">5. Deleting your account and data</h2>
+<ul>
+  <li><strong>In the App:</strong> Settings → Account → <em>Delete account and data</em>. Your account, predictions and statistics are deleted permanently and you are signed out.</li>
+  <li><strong>Without the App:</strong> email <a href="mailto:matchmindai@gmail.com?subject=Account%20deletion%20request">matchmindai@gmail.com</a> with the subject "Account deletion request" from the email address of your account. We delete the account and its data within 30 days and confirm by email.</li>
+</ul>
+<p>Anonymous AI predictions and aggregated community statistics contain no personal data and are not deleted.</p>
+
+<h2>6. Your rights</h2>
+<p>Depending on where you live (for example under the GDPR or Turkey's KVKK), you may ask to access, correct, delete or receive a copy of your data, or object to its processing. Email <a href="mailto:matchmindai@gmail.com">matchmindai@gmail.com</a>; we answer within 30 days. You may also complain to your data protection authority.</p>
+
+<h2>7. Age</h2>
+<p>The App contains football predictions and betting-related information and is intended for users <strong>18 and over</strong>. We do not knowingly collect data from anyone under 18; if you believe a minor has given us data, contact us and we will delete it.</p>
+
+<h2>8. Security</h2>
+<p>All connections use HTTPS. Access to your account data requires your sign-in, and passwords are stored only as hashes by our account provider.</p>
+
+<h2>9. Disclaimer</h2>
+<div class="highlight">AI predictions are statistical estimates for information only; they can be wrong and are not a guarantee. The App does not offer, process or link to betting or gambling services.</div>
+
+<h2>10. Changes</h2>
+<p>When this policy changes we publish the new version on this page and update the date at the top.</p>
+
+<div class="contact-box">
+  <strong>Contact</strong><br>
+  Email: <a href="mailto:matchmindai@gmail.com">matchmindai@gmail.com</a><br>
+  App: MatchMind AI · <code>com.ata.matchmindai</code>
+</div>
+</section>
+
+<footer>© 2026 MatchMind AI</footer>
+</div>
 </body>
 </html>
